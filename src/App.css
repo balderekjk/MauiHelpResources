@@ -1,0 +1,171 @@
+:root {
+  --calm-blue: hsl(199, 81%, 31%);
+  --text-blue: hsl(199, 80%, 18%);
+  --white: hsl(0, 0%, 97%);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+strong {
+  color: var(--text-blue);
+}
+
+.panel-company {
+  color: var(--text-blue);
+}
+
+.kupuna {
+  display: flex;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  max-width: 30%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: var(--calm-blue);
+}
+
+.nav > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  color: var(--white);
+  margin: 0;
+  padding: 0 1em;
+}
+
+.nav > ul > li {
+  cursor: pointer;
+  list-style: none;
+  text-align: left;
+  margin: 10px 0;
+}
+
+.nav > ul > li:hover {
+  text-decoration: underline;
+  /* text-shadow: hsl(199, 81%, 50%) 0px 0px 4px; */
+}
+
+.nav > ul > li:active {
+  color: hsl(0, 0%, 86%);
+}
+
+.container {
+  background: url('./assets/background.jpg');
+  background-size: 100% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 192px;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.toggle-btn {
+  font-weight: 700;
+  font-size: 1.1rem;
+  background-color: hsla(0, 0%, 97%, 0.5);
+  border: 1px solid var(--text-blue);
+  border-radius: 5px;
+  text-align: center;
+  color: var(--text-blue);
+  cursor: pointer;
+  margin: 1em;
+  padding: 1ch;
+}
+
+.toggle-btn:hover {
+  color: blue;
+  text-decoration: underline;
+  border: 1px solid blue;
+  background-color: hsla(0, 0%, 97%, 0.7);
+}
+
+.toggle-btn:active {
+  background-color: hsla(0, 0%, 92%, 0.7);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  word-break: break-word;
+  /* padding: 0 6% 0 2%; */
+}
+
+.card-wrapper {
+  background-color: hsla(0, 0%, 97%, 0.6);
+  width: 100%;
+  padding: 0 2.5%;
+  border: 1px solid var(--calm-blue);
+}
+
+.panel-title {
+  background: hsla(177, 70%, 41%, 0.35);
+  width: 105%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.panel-title:hover {
+  background-color: hsla(206, 100%, 93%, 0.6);
+}
+
+.panel-title:hover > * {
+  color: blue;
+}
+
+.panel-title:active {
+  background-color: hsla(206, 100%, 78%, 0.6);
+}
+
+.details {
+  text-align: center;
+  cursor: pointer;
+  color: blue;
+}
+
+.details:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 531px) {
+  .container {
+    width: 70%;
+  }
+  .card {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .nav,
+  .card,
+  .toggle-btn {
+    font-size: 0.8em;
+  }
+
+  .nav {
+    word-break: break-word;
+  }
+}
