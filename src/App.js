@@ -163,7 +163,13 @@ function App() {
             </div>
           );
         })}
-        <div style={{ margin: '0.8rem', color: 'hsl(199, 80%, 10%)' }}>
+        <div
+          style={{
+            margin: '0.8rem',
+            textAlign: 'center',
+            color: 'hsl(199, 80%, 10%)',
+          }}
+        >
           Background Image Created By{' '}
           <a href="https://www.123freevectors.com/">Free Vector</a>
         </div>
