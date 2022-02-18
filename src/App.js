@@ -16,7 +16,7 @@ function App() {
 
   const getResources = () => {
     axios
-      .get('https://maui-help-resources.herokuapp.com/api/resources')
+      .get('https://maui-help-resources.herokuapp.com/resources')
       .then((response) => {
         setFullList(response.data);
       });
