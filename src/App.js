@@ -115,7 +115,7 @@ function App() {
         </div>
         {currentList.map((val) => {
           return (
-            <div className="card">
+            <div className="card" key={val.id}>
               <div className="card-wrapper">
                 <div
                   style={{
@@ -135,7 +135,6 @@ function App() {
                     <h3
                       className="panel-company"
                       style={{ textAlign: 'center' }}
-                      key={val.id}
                     >
                       {val.company}
                     </h3>
