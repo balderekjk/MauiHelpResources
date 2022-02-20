@@ -57,19 +57,36 @@ function App() {
     <div className="kupuna">
       <nav className="nav">
         <ul>
-          <li onClick={() => filterResources('Housing')}>Housing</li>
-          <li onClick={() => filterResources('Homeless Outreach')}>
+          <li key="Housing" onClick={() => filterResources('Housing')}>
+            Housing
+          </li>
+          <li
+            key="Homeless Outreach"
+            onClick={() => filterResources('Homeless Outreach')}
+          >
             Homeless Outreach
           </li>
-          <li onClick={() => filterResources('Food & Transportation')}>
+          <li
+            key="Food & Transportation"
+            onClick={() => filterResources('Food & Transportation')}
+          >
             Food & Transportation
           </li>
-          <li onClick={() => filterResources('Medical')}>Medical</li>
-          <li onClick={() => filterResources('Rental Assistance')}>
+          <li key="Medical" onClick={() => filterResources('Medical')}>
+            Medical
+          </li>
+          <li
+            key="Rental Assistance"
+            onClick={() => filterResources('Rental Assistance')}
+          >
             Rental Assistance
           </li>
-          <li onClick={() => filterResources('Childcare')}>Childcare</li>
-          <li onClick={() => filterResources('Other')}>Other</li>
+          <li key="Childcare" onClick={() => filterResources('Childcare')}>
+            Childcare
+          </li>
+          <li key="Other" onClick={() => filterResources('Other')}>
+            Other
+          </li>
         </ul>
       </nav>
       <div className="container">
@@ -118,6 +135,7 @@ function App() {
                     <h3
                       className="panel-company"
                       style={{ textAlign: 'center' }}
+                      key={val.id}
                     >
                       {val.company}
                     </h3>
@@ -157,7 +175,7 @@ function App() {
                       setModal(true);
                     }}
                   >
-                    <div>Click Here to View Description</div>
+                    Click Here to View Description
                   </p>
                 ) : (
                   ''
@@ -172,7 +190,13 @@ function App() {
         </div>
         <div className="footer" style={{ marginBottom: '0.8rem' }}>
           Background Image Created By{' '}
-          <a href="https://www.123freevectors.com/">Free Vector</a>
+          <a
+            href="https://www.123freevectors.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            Free Vector
+          </a>
         </div>
       </div>
     </div>
