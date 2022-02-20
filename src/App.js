@@ -166,13 +166,11 @@ function App() {
             </div>
           );
         })}
-        <div
-          style={{
-            margin: '0.8rem',
-            textAlign: 'center',
-            color: 'hsl(199, 80%, 10%)',
-          }}
-        >
+        <div className="footer">
+          Don't see a relevant resource here? Call{' '}
+          <a href={`tel:808-250-0132`}>808-250-0132</a>.
+        </div>
+        <div className="footer" style={{ marginBottom: '0.8rem' }}>
           Background Image Created By{' '}
           <a href="https://www.123freevectors.com/">Free Vector</a>
         </div>

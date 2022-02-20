@@ -175,6 +175,12 @@ strong {
   text-decoration: underline;
 }
 
+.footer {
+  margin-top: 0.8rem;
+  text-align: center;
+  color: hsl(199, 80%, 10%);
+}
+
 @media screen and (max-width: 620px) {
   .container {
     margin-left: 30%;
