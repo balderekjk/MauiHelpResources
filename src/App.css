@@ -199,7 +199,8 @@ strong {
 @media screen and (max-width: 435px) {
   .nav,
   .card,
-  .toggle-btn {
+  .toggle-btn,
+  .footer {
     font-size: 0.8em;
   }
 
