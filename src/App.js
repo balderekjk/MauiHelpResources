@@ -93,6 +93,9 @@ function App() {
             ? `Hide All ${currentCategory}`
             : `View All ${currentCategory}`}
         </div>
+        <div className={fullList.length === 0 ? 'spinner' : ''}>
+          {fullList.length === 0 ? String.fromCharCode(9711) : ''}
+        </div>
         {currentList.map((val) => {
           return (
             <div className="card">
