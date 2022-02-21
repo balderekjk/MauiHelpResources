@@ -184,8 +184,8 @@ function App() {
           );
         })}
         <div className="footer">
-          Don't see a relevant resource here? Call{' '}
-          <a href={`tel:808-250-0132`}>808-250-0132</a>.
+          Don't see a relevant resource here? Email{' '}
+          <a href={`mailto:bal.derek.j@gmail.com`}>bal.derek.j@gmail.com</a>.
         </div>
         <div className="footer" style={{ marginBottom: '0.8rem' }}>
           Background Image Created By{' '}
