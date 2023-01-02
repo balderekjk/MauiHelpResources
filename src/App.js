@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import Modal from './components/Modal';
 import AccordionData from './components/AccordionData';
 import './App.css';
+import data from './db.json';
 
 function App() {
-  const [fullList, setFullList] = useState([]);
+  const [fullList, setFullList] = useState(data);
   const [currentList, setCurrentList] = useState([]);
   const [currentCompany, setCurrentCompany] = useState('');
   const [currentDetails, setCurrentDetails] = useState('');
@@ -13,18 +13,6 @@ function App() {
   const [currentCategory, setCurrentCategory] = useState('Housing');
   const [toggleOn, setToggleOn] = useState(false);
   const [modal, setModal] = useState(false);
-
-  const getResources = () => {
-    axios
-      .get('https://maui-help-resources.herokuapp.com/resources')
-      .then((response) => {
-        setFullList(response.data);
-      });
-  };
-
-  useEffect(() => {
-    getResources();
-  }, []);
 
   useEffect(() => {
     setCurrentList(fullList.filter((val) => val.category === 'Housing'));
